@@ -30,8 +30,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 function overlap () {
     game.over(false)
 }
-function projectile () {
-    projectile2 = sprites.createProjectileFromSide(img`
+function projectile2 () {
+    projectile = sprites.createProjectileFromSide(img`
 . . . . . . . . . . . f f f f f f f . . . c c f f f . . . . . . . . . . 
 . . . . . . . . . . f 9 9 9 9 9 9 9 f f c 9 9 9 9 f . . . . . . . . . . 
 . . . . . . . . . . f 9 9 1 1 1 9 9 9 9 9 f f 9 f . . . . . . . . . . . 
@@ -49,9 +49,9 @@ function projectile () {
 . . . . . . . . . . . . . . c c c f f f 9 9 9 9 f 9 9 . . . . . f 9 9 f 
 . . . . . . . . . . . . . . . . . . . . f f f f f . . . . . . . . f f f 
 `, 0, 0)
-    projectile2.follow(a_hero)
+    projectile.follow(a_hero)
 }
-let projectile2: Sprite = null
+let projectile: Sprite = null
 let a_hero: Sprite = null
 hero()
 game.onUpdateInterval(1000, function () {
